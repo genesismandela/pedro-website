@@ -1,0 +1,40 @@
+.heading-1 {
+  @include fluid-font(3rem, 5rem);
+  display: block;
+
+  font-weight: 300;
+  align-self: flex-start;
+}
+
+.heading-2 {
+  @include fluid-font(1.8rem, 3rem);
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+}
+
+.heading-3 {
+  @include fluid-font(2.4rem, 3.2rem);
+  color: $white;
+  text-align: center;
+}
+
+.heading-4 {
+  @include fluid-font(1.8rem, 3rem);
+  color: $blue;
+  font-weight: 500;
+  // mix-blend-mode: difference;
+}
+
+.text-big {
+  @include fluid-font(2.8rem, 5.6rem);
+  margin-bottom: 2rem;
+}
+
+.text {
+  @include fluid-font(1.8rem, 2.8rem);
+  font-weight: 100;
+}
+
+.text-white {
+  color: $white;
+}

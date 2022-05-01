@@ -1,0 +1,74 @@
+@mixin fluid-font(
+	$min,
+	$max,
+	$min-vw: 320px,
+	$max-vw: 1600px,
+	$fallback: false
+) {
+	$min-no-unit: strip-units($min);
+	$max-no-unit: strip-units($max);
+
+	$min-vw-no-unit: strip-units($min-vw);
+	$max-vw-no-unit: strip-units($max-vw);
+
+	@if getUnit($min) == 'rem' or getUnit($min) == 'em' {
+		$min-no-unit: strip-units($min) * 10;
+		$max-no-unit: strip-units($max) * 10;
+	}
+
+	$responsive: calc(
+		#{$min-no-unit}px + (#{$max-no-unit} - #{$min-no-unit}) *
+			((100vw - #{$min-vw}) / (#{$max-vw-no-unit} - #{$min-vw-no-unit}))
+	);
+
+	@if $fallback {
+		font-size: $fallback;
+	} @else {
+		font-size: $max;
+	}
+
+	font-size: $responsive;
+
+	@media screen and (max-width: #{$min-vw}) {
+		font-size: $min;
+	}
+	@media screen and (min-width: #{$max-vw}) {
+		font-size: $max;
+	}
+}
+
+@function strip-units($number) {
+	@return $number / ($number * 0 + 1);
+}
+
+@function getUnit($value) {
+	@return str-slice($value * 0 + '', 2, -1);
+}
+
+@mixin bgImages {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+// @mixin flex($direction, $justify, $align: 'center') {
+// 	display: flex;
+// 	flex-direction: $direction;
+// 	justify-content: $justify;
+// 	align-items: $align;
+// }
+
+// @mixin btn {
+// 	background-color: $colorDark1;
+// 	border: 1px solid $colorLight1;
+// 	border-radius: 3px;
+// 	color: $colorLight2;
+// 	cursor: pointer;
+// 	font-size: 1.4rem;
+// 	font-weight: bold;
+
+// 	&:hover {
+// 		background-color: $colorLight1;
+// 		color: $colorDark2;
+// 	}
+// }

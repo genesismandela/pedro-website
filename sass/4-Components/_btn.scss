@@ -1,0 +1,52 @@
+.btn {
+  @include fluid-font(1.4rem, 2.8rem);
+  border: 1px solid $yellow;
+  border-radius: 5px;
+  font-weight: 300;
+  margin-top: 3rem;
+  margin-right: 1.2rem;
+  padding: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-explore {
+  background: linear-gradient(to right, $yellow 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: $white;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-position: left bottom;
+    color: $black;
+  }
+}
+
+.btn-black {
+  background: linear-gradient(to right, transparent 50%, $black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: $yellow;
+  transition: all 0.5s ease;
+  border: 1px solid $black;
+
+  &:hover {
+    background-position: left bottom;
+    color: $black;
+  }
+}
+
+.btn-cta {
+  color: $black;
+
+  background: linear-gradient(to right, transparent 50%, $yellow 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-position: left bottom;
+    color: $white;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "pedro-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "live": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "live-server": "^1.2.1",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "prettier": "2.5.1"
+  },
+  "description": ""
+}
