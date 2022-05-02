@@ -1,5 +1,5 @@
 .heading-1 {
-  @include fluid-font(3rem, 5rem);
+  @include fluid-font(4rem, 5rem);
   display: block;
 
   font-weight: 300;
@@ -31,8 +31,6 @@
 }
 
 .text {
-  @include fluid-font(1.8rem, 2.8rem);
-  font-weight: 100;
 }
 
 .text-white {

@@ -9,224 +9,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cinzel&family=Roboto:wght@100;300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cinzel:wght@400;500;800&family=Roboto:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <!-- HEADER LANDING PAGE -->
-    <header class="header">
-      <!-- NAVIGATION MENU -->
-      <nav class="navigation">
-        <!-- NAV LOGO -->
-        <div class="navigation__logo-wrapper">
-          <a href="index.html" class="logo">Pedro Zulaica</a>
+    <div class="header-bg">
+      <header class="header">
+        <!-- NAVIGATION MENU -->
+        <div class="blur-overlay"></div>
+        <nav class="navigation">
+          <!-- NAV LOGO -->
+          <div class="navigation__logo-wrapper">
+            <a href="index.html" class="logo">Pedro Zulaica</a>
+          </div>
+          <!-- NAV LINKS -->
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="index.html" class="navigation__link">Home</a>
+            </li>
+
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">About</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Projects</a>
+            </li>
+          </ul>
+          <a href="#" class="navigation__link-contact"><button class="btn btn-cta navigation__btn">Contact</button></a>
+          <!-- NAV BURGER -->
+          <div class="burger-box">
+            <button class="hamburger hamburger--spring" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </nav>
+        <!-- HEADING -->
+        <div class="heading-wrapper">
+          <h1 class="heading-1">Engineering renovable solutions with future technologies</h1>
+
+          <p class="text">Hi, I am Pedro Zulaica and I am energy engineer passionate about solar and wind energy</p>
+
+          <button class="btn btn-cta">See projects</button>
+          <!-- <button class="btn btn-cta">Get in touch</button> -->
         </div>
-        <!-- NAV LINKS -->
-        <ul class="navigation__list">
-          <li class="navigation__item navigation__item--active">
-            <a href="index.html" class="navigation__link">Home</a>
+
+        <!-- SCROLL ICON ANIMATION -->
+        <div class="scroll-wrapper">
+          <a href="#about" class="scroll-wrapper__text">
+            <span></span>
+          </a>
+        </div>
+
+        <ul class="link-list">
+          <li class="link-list__item">
+            <div class="link-list__item__wrap">
+              <a href="#" class="link-list__item__wrap__link">Linkedin</a>
+              <span>See my Linkedin profile</span>
+            </div>
           </li>
-          <li class="navigation__item">
-            <a href="pages/experience.html" class="navigation__link">Experience</a>
+          <li class="link-list__item">
+            <div class="link-list__item__wrap">
+              <a href="#" class="link-list__item__wrap__link">Email</a>
+              <span>Copy my email to your clipboard</span>
+            </div>
           </li>
-          <li class="navigation__item">
-            <a href="pages/projects.html" class="navigation__link">Projects</a>
+          <li class="link-list__item">
+            <div class="link-list__item__wrap">
+              <a href="#" class="link-list__item__wrap__link">Github</a>
+              <span>See my Github profile</span>
+            </div>
           </li>
-          <li class="navigation__item">
-            <a href="pages/about.html" class="navigation__link">About me</a>
-          </li>
-          <li class="navigation__item">
-            <a href="pages/contact.html" class="navigation__link">Contact</a>
+          <li class="link-list__item">
+            <div class="link-list__item__wrap">
+              <a href="#" class="link-list__item__wrap__link">Resume</a>
+              <span>Download my complete resume</span>
+            </div>
           </li>
         </ul>
-        <!-- NAV BURGER -->
-        <div class="burger-box">
-          <button class="hamburger hamburger--spring" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-        </div>
-      </nav>
-      <!-- HEADING -->
-      <div class="heading-wrapper">
-        <h1 class="heading-1">Pedro Zulaica Rey</h1>
-
-        <p class="text">Hi, I am Electrical & Energy Engineer passionate about renovable energy and future technologies.</p>
-
-        <div class="btn-wrapper">
-          <button class="btn btn-explore">Experience</button>
-          <button class="btn btn-cta">Get in touch</button>
-        </div>
-      </div>
-      <!-- SOCIAL MEDIA CONTACT LINKS -->
-      <div class="contact-links-wrapper">
-        <!-- LINKEDIN -->
-        <a class="icon-link" href="https://www.linkedin.com/in/zulaica-pedro/" target="_blank">
-          <svg class="icon-img" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <title>Linkedin profile link</title>
-            <path
-              d="M5 3c0 1.062-0.71 1.976-2.001 1.976-1.215 0-1.999-0.862-1.999-1.924 0-1.090 0.76-2.052 2-2.052s1.976 0.91 2 2zM1 19v-13h4v13h-4z"
-            ></path>
-            <path
-              d="M7 10.444c0-1.545-0.051-2.836-0.102-3.951h3.594l0.178 1.723h0.076c0.506-0.811 1.746-2 3.822-2 2.532 0 4.432 1.695 4.432 5.342v7.442h-4v-6.861c0-1.594-0.607-2.81-2-2.81-1.062 0-1.594 0.86-1.873 1.569-0.102 0.254-0.127 0.608-0.127 0.963v7.139h-4v-8.556z"
-            ></path>
-          </svg>
-        </a>
-        <!-- GITHUB -->
-        <a class="icon-link" href="#" target="_blank">
-          <svg class="icon-img" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <title>Github profile</title>
-            <path
-              d="M13.18 11.309c-0.718 0-1.3 0.807-1.3 1.799 0 0.994 0.582 1.801 1.3 1.801s1.3-0.807 1.3-1.801c-0.001-0.992-0.582-1.799-1.3-1.799zM17.706 6.626c0.149-0.365 0.155-2.439-0.635-4.426 0 0-1.811 0.199-4.551 2.080-0.575-0.16-1.548-0.238-2.519-0.238-0.973 0-1.945 0.078-2.52 0.238-2.741-1.881-4.552-2.080-4.552-2.080-0.789 1.987-0.781 4.061-0.634 4.426-0.928 1.008-1.495 2.219-1.495 3.871 0 7.186 5.963 7.301 7.467 7.301 0.342 0 1.018 0.002 1.734 0.002s1.392-0.002 1.732-0.002c1.506 0 7.467-0.115 7.467-7.301 0-1.652-0.566-2.863-1.494-3.871zM10.028 16.915h-0.056c-3.771 0-6.709-0.449-6.709-4.115 0-0.879 0.31-1.693 1.047-2.369 1.227-1.127 3.305-0.531 5.662-0.531 0.010 0 0.020 0 0.029 0s0.018 0 0.027 0c2.357 0 4.436-0.596 5.664 0.531 0.735 0.676 1.045 1.49 1.045 2.369 0 3.666-2.937 4.115-6.709 4.115zM6.821 11.309c-0.718 0-1.3 0.807-1.3 1.799 0 0.994 0.582 1.801 1.3 1.801s1.301-0.807 1.301-1.801c0-0.992-0.582-1.799-1.301-1.799z"
-            ></path>
-          </svg>
-        </a>
-        <!-- EMAIL -->
-        <a class="icon-link" href="mailto:zulaikapedro@gmail.com" target="_blank">
-          <svg class="icon-img" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
-            <title>Email contact</title>
-            <path d="M295.2,257.8L251.4,295c-3.5,2.9-8.6,2.9-12,0l-43.8-37.1L16.7,409.1h456.6L295.2,257.8z" />
-            <polygon points="0,92.2 0,397.8 180.1,245" />
-            <polygon points="16.7,80.9 245,274.6 473.3,80.9" />
-            <polygon points="309.9,245 490,397.8 490,92.2" />
-          </svg>
-        </a>
-        <!-- CV -->
-        <a class="icon-link" href="pdf/cv.pdf" target="_blank">
-          <svg class="icon-img" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.916 43.916">
-            <title>Download personal CV</title>
-            <path
-              d="M34.395,0H9.522c-2.762,0-5,2.239-5,5v33.916c0,2.761,2.238,5,5,5h24.871c2.762,0,5-2.239,5-5V5
-              C39.395,2.239,37.154,0,34.395,0z M9.208,16.855c0-1.172,0.951-2.121,2.121-2.121h0.742c-0.791-0.874-1.277-2.03-1.277-3.304
-              c0-2.723,2.209-4.931,4.932-4.931c2.725,0,4.932,2.207,4.932,4.932c0,1.272-0.486,2.429-1.279,3.303h0.709
-              c1.172,0,2.121,0.949,2.121,2.121v3.578c0,1.122-0.875,2.03-1.975,2.106h-9.051c-1.1-0.076-1.975-0.984-1.975-2.106V16.855
-              L9.208,16.855z M32.708,37.416h-21.5c-1.104,0-2-0.896-2-2s0.896-2,2-2h21.5c1.104,0,2,0.896,2,2S33.812,37.416,32.708,37.416z
-              M32.708,29.916h-21.5c-1.104,0-2-0.896-2-2s0.896-2,2-2h21.5c1.104,0,2,0.896,2,2S33.812,29.916,32.708,29.916z M32.708,22.416
-              h-6.5c-1.104,0-2-0.896-2-2c0-1.104,0.896-2,2-2h6.5c1.104,0,2,0.896,2,2C34.708,21.52,33.812,22.416,32.708,22.416z"
-            />
-          </svg>
-        </a>
-      </div>
-      <!-- SCROLL ICON ANIMATION -->
-      <div class="scroll-wrapper">
-        <a href="#about" class="scroll-wrapper__text">
-          <span></span>
-        </a>
-      </div>
-    </header>
+      </header>
+    </div>
     <!-- HEADER END -->
-
-    <!-- ABOUT SECTION -->
-<section id="about" class="about-wrapper">
-  <h2 class="heading">
-    Hello! I am Pedro,
-    <br />
-    Electrical and energy engineer
-  </h2>
-  <div class="about-content">
-    <div class="text-wrapper">
-      <p class="text">
-        I graduated from a four-year Bachelor of Electrical Engineering at University of Navarra, Spain, where I coursed one semester at
-        Monash University, Australia in 2018. After that, I got accepted at Aalborg University, Denmark to study an MSc in Energy
-        Engineering.
-      </p>
-      <button class="btn btn-cta">Get in touch</button>
-    </div>
-    <img src="img/pedro-zulaica.jpg" alt="Pedro Zulaica" />
-  </div>
-  <div class="btn-wrapper"></div>
-
-  <!-- <div class="cloud"></div>
-
-        <div class="drop"></div> -->
-</section>
-<!-- ABOUT SECTION END -->
-
-<article class="experience-text-wrapper">
-  <div class="experience-text-wrapper__text-wrapper">
-    <p class="text">
-      Graduated in Bachelor of Engineering where I acquired a set of scientific and technological knowledge that gave me a conceptual vision
-      to designing industrial and operating equipment, machines, systems, components and processes.
-    </p>
-    <p class="text">
-      I studied how to design electrical installations for generating energy such as solar, hydro, thermal or transporting energy. As well
-      as focus on the study future power supply sources and the structure of future power supply systems.
-    </p>
-  </div>
-</article>
-
-<div class="panel-wrapper">
-  <div class="title-wrapper">
-    <h3 class="title-wrapper__heading title-wrapper__heading--1 title-wrapper__heading__active">Experience</h3>
-    <h3 class="title-wrapper__heading title-wrapper__heading--2">Certifications</h3>
-  </div>
-  <!-- PANEL 1 - Experience -->
-  <div class="experience-wrapper">
-    <button class="experience-wrapper__btn experience-wrapper__btn--back">&#8882;</button>
-    <button class="experience-wrapper__btn experience-wrapper__btn--next">&#8883;</button>
-    <div class="experience-wrapper__slider">
-      <!-- Slide 1 -->
-      <div class="experience-wrapper__slider__slide slide-1">
-        <div class="company">
-          <h4 class="company__heading">Eurowind Energy, Denmark</h4>
-          <span class="company__dates">2020 - Present</span>
-          <a class="company__link" href="https://eurowindenergy.com">Eurowind Energy</a>
-        </div>
-
-        <div class="duties">
-          <h5 class="duties__heading">Responsible for:</h5>
-          <ul class="duties__list">
-            <li class="duties__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li class="duties__item">Nemo delectus eum perspiciatis enim ipsam suscipit.</li>
-            <li class="duties__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et?</li>
-          </ul>
-        </div>
-      </div>
-      <!-- Slide 2 -->
-      <div class="experience-wrapper__slider__slide slide-2">
-        <div class="company">
-          <h4 class="company__heading">Vestas Wind Systems, Denmark</h4>
-          <span class="company__dates">2018 - 2020</span>
-          <a class="company__link" href="https://www.vestas.com/en">Vestas Wind Systems</a>
-        </div>
-
-        <div class="duties">
-          <h5 class="duties__heading">Responsible for:</h5>
-          <ul class="duties__list">
-            <li class="duties__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li class="duties__item">Nemo delectus eum perspiciatis enim ipsam suscipit.</li>
-            <li class="duties__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et?</li>
-          </ul>
-        </div>
-      </div>
-      <!-- Slide 3 -->
-      <div class="experience-wrapper__slider__slide slide-3">
-        <div class="company">
-          <h4 class="company__heading">Any experience, Australia?</h4>
-          <span class="company__dates">2016 - 2017</span>
-          <a class="company__link" href="#">Australia</a>
-        </div>
-
-        <div class="duties">
-          <h5 class="duties__heading">Responsible for:</h5>
-          <ul class="duties__list">
-            <li class="duties__item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li class="duties__item">Nemo delectus eum perspiciatis enim ipsam suscipit.</li>
-            <li class="duties__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et?</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="experience-wrapper__nav">
-      <div class="experience-wrapper__nav__balls"></div>
-    </div>
-  </div>
-  <!-- PANEL 2 - Certifications -->
-</div>
-
-
     <script src="script.js"></script>
   </body>
 </html>
+
+<!-- navigation__item--active -->

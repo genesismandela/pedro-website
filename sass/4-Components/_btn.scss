@@ -1,5 +1,5 @@
 .btn {
-  @include fluid-font(1.4rem, 2.8rem);
+  // @include fluid-font(1.4rem, 2.8rem);
   border: 1px solid $yellow;
   border-radius: 5px;
   font-weight: 300;
@@ -44,6 +44,8 @@
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease;
+
+  padding: 1rem 2rem;
 
   &:hover {
     background-position: left bottom;

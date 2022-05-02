@@ -1,109 +1,218 @@
-.header {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-
+.header-bg {
   background-image: url(../img/solar-panel.jpg);
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header {
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  // align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  max-width: 1440px;
+  margin: 0 auto;
 
   .heading-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    height: 100%;
+    padding: 2rem;
+    margin-top: 2rem;
 
-    padding-left: 5%;
-    padding-right: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+
+    max-width: 90rem;
+    margin: 0 auto;
 
     .heading-1 {
       color: $yellow;
       text-transform: uppercase;
-      font-weight: bold;
-      font-family: 'Cinzel', serif;
+      font-weight: 400;
+      font-family: 'Architects Daughter', cursive;
+
+      @include fluid-font(3rem, 6rem);
     }
 
     .text {
-      margin-top: 2.5rem;
-      color: $yellow-dark;
+      color: $white;
+      padding-left: 3rem;
+      margin-top: 1rem;
+      @include fluid-font(1.8rem, 2.8rem);
+      font-weight: 500;
+      font-family: 'Roboto', sans-serif;
+
       max-width: 75rem;
-      font-weight: 400;
+    }
+
+    .btn {
+      display: inline-block;
+      width: fit-content;
+      margin-left: 3rem;
     }
   }
-}
 
-.scroll-wrapper {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translate(-50%, 0);
+  .scroll-wrapper {
+    position: absolute;
+    bottom: 0.1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
 
-  &__text {
-    @include fluid-font(1.4rem, 1.8rem);
-    color: $white;
-    font-weight: 100;
-    margin-left: -0.3rem;
+    &__text {
+      @include fluid-font(1.4rem, 1.8rem);
+      color: $white;
+      font-weight: 100;
+      margin-left: -0.3rem;
+    }
+
+    a {
+      padding-top: 70px;
+      text-decoration: none;
+
+      span {
+        position: absolute;
+        top: -3rem;
+        left: 50%;
+        width: 18px;
+        height: 18px;
+        margin-left: -12px;
+        border-left: 2px solid $yellow;
+        border-bottom: 2px solid $yellow;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: sdb05 1.5s infinite;
+        animation: sdb05 1.5s infinite;
+        box-sizing: border-box;
+      }
+    }
   }
 
-  a {
-    padding-top: 70px;
-    text-decoration: none;
+  .link-list {
+    display: none;
 
-    span {
+    @media only screen and(min-width: $bp-tablet) {
+      visibility: visible;
+      display: flex;
+      flex-direction: column-reverse;
+
+      list-style: none;
+
       position: absolute;
-      top: -4.5rem;
-      left: 50%;
-      width: 18px;
-      height: 18px;
-      margin-left: -12px;
-      border-left: 1px solid #fff;
-      border-bottom: 1px solid #fff;
-      -webkit-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      -webkit-animation: sdb05 1.5s infinite;
-      animation: sdb05 1.5s infinite;
-      box-sizing: border-box;
+      bottom: 2rem;
+      left: 0;
+      padding-left: 2rem;
+      width: 100%;
+
+      &__item {
+        margin-top: 2.5rem;
+
+        &__wrap {
+          display: flex;
+          align-items: center;
+
+          &__link {
+            @include fluid-font(1.2rem, 1.5rem);
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $white;
+
+            -webkit-writing-mode: vertical-lr;
+            /* old Win safari */
+            writing-mode: vertical-rl; /* FF */
+            writing-mode: tb-lr;
+            /* writing-mode:sideways-lr;  could be the one */
+            /* eventually untill sideways-lr is working everywhere */
+            transform: scale(-1, -1);
+            white-space: nowrap;
+            margin-right: 2rem;
+          }
+
+          span {
+            color: $black;
+            background-color: $yellow;
+            padding: 0.5rem;
+            border-radius: 5px;
+
+            display: none;
+          }
+        }
+      }
     }
   }
 }
 
-.contact-links-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+// .header {
+//   width: 100%;
+//   height: 100vh;
+//   position: relative;
 
-  margin-left: 5%;
-  display: flex;
+//   .heading-wrapper {
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
 
-  display: none;
+//     padding-left: 5%;
+//     padding-right: 1.5%;
 
-  .icon-link {
-    width: 5rem;
-    margin-bottom: 2rem;
-  }
+//     .heading-1 {
+//       color: $yellow;
+//       text-transform: uppercase;
+//       font-weight: bold;
+//       font-family: 'Cinzel', serif;
+//     }
 
-  .icon-img {
-    width: 5rem;
-    height: 2rem;
-    fill: $white;
+//     .text {
+//       margin-top: 2.5rem;
+//       color: $yellow-dark;
+//       max-width: 75rem;
+//       font-weight: 400;
+//     }
+//   }
+// }
 
-    &:hover {
-      fill: $yellow;
-    }
-  }
+// .contact-links-wrapper {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
 
-  @media only screen and(min-width: $bp-tablet) {
-    display: flex;
-  }
-}
+//   margin-left: 5%;
+//   display: flex;
 
-span {
-  font-size: 16px;
-}
+//   display: none;
+
+//   .icon-link {
+//     width: 5rem;
+//     margin-bottom: 2rem;
+//   }
+
+//   .icon-img {
+//     width: 5rem;
+//     height: 2rem;
+//     fill: $white;
+
+//     &:hover {
+//       fill: $yellow;
+//     }
+//   }
+
+//   @media only screen and(min-width: $bp-tablet) {
+//     display: flex;
+//   }
+// }
+
+// span {
+//   font-size: 16px;
+// }

@@ -1,18 +1,52 @@
+.blur-overlay {
+  /* From https://css.glass */
+  background: $black-transparent;
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+
+  visibility: hidden;
+
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+
+@-moz-document url-prefix() {
+  .blur-overlay {
+    background-color: $black;
+  }
+}
 // Navigation Container
 .navigation {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   width: 100%;
 
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
   padding-top: 2rem;
+  max-width: 1240px;
+  transform: translate(-50%);
+  z-index: 60;
+
+  @media only screen and(min-width: $bp-tablet) {
+  }
 
   // Navigation Logo Box
   &__logo-wrapper {
-    margin-left: 5%;
+    margin-left: 2rem;
+
+    position: relative;
+    z-index: 10;
+    visibility: visible;
+    transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 
     .logo {
       @include fluid-font(1.6rem, 2.4rem);
@@ -26,33 +60,44 @@
 
   // Navigation Nav Menu
   &__list {
+    visibility: hidden;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    margin-right: 1rem;
+    width: 100%;
+    height: 100vh;
     position: absolute;
-    right: 1rem;
-    z-index: 8000;
-    // font-family: 'Architects Daughter', cursive;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-bottom: 3rem;
+    padding-top: 10%;
+    transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 
-    @media only screen and(max-width: $bp-tablet) {
-      visibility: hidden;
-      flex-direction: column;
-      justify-content: space-evenly;
-      width: 100%;
-      height: 100vh;
-      background-image: linear-gradient(to left bottom, ($black 55%), $white, $black);
-      position: absolute;
+    margin-right: 1rem;
+    right: 1rem;
+
+    @media only screen and(min-width: $bp-tablet) {
+      visibility: visible;
+      flex-direction: row;
+      justify-content: normal;
+      align-content: center;
+
+      height: auto;
+      width: fit-content;
+
+      position: relative;
+
       top: 0;
-      left: 0;
-      padding-bottom: 3rem;
-      padding-top: 10%;
-      transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+      margin: 0 auto;
+      padding: 0;
     }
   }
 
   &__item {
     list-style: none;
-    margin-left: 4.5rem;
+    padding: 0 2rem 0 2rem;
 
     @media only screen and(max-width: $bp-tablet) {
       margin-top: 2.5rem;
@@ -83,5 +128,19 @@
       transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
       background-position: 0%;
     }
+  }
+
+  &__link-contact {
+    visibility: hidden;
+    margin-right: 2rem;
+
+    @media only screen and(min-width: $bp-tablet) {
+      visibility: visible;
+    }
+  }
+
+  &__btn {
+    margin: 0 !important;
+    @include fluid-font(1.6rem, 2rem);
   }
 }
