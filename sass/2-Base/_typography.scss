@@ -14,25 +14,11 @@
 
 .heading-3 {
   @include fluid-font(2.4rem, 3.2rem);
-  color: $white;
-  text-align: center;
 }
 
 .heading-4 {
   @include fluid-font(1.8rem, 3rem);
-  color: $blue;
+
   font-weight: 500;
   // mix-blend-mode: difference;
-}
-
-.text-big {
-  @include fluid-font(2.8rem, 5.6rem);
-  margin-bottom: 2rem;
-}
-
-.text {
-}
-
-.text-white {
-  color: $white;
 }

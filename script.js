@@ -1,6 +1,6 @@
 'use strict';
 
-// ///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
 // Navigation Menu
 const logo = document.querySelector('.navigation__logo-wrapper');
 const burger = document.querySelector('.hamburger'); // Select Burger
@@ -19,6 +19,7 @@ const NavMenuPhones = function () {
         navMenu.style.visibility = 'hidden'; // Close Menu
         body.style.overflow = 'scroll'; // Make body scroll again (default)
         burger.classList.toggle('is-active');
+        blurOverlay.style.visibility = 'hidden';
       });
     });
   }
@@ -41,6 +42,21 @@ burger.addEventListener('click', function () {
     logo.style.visibility = 'hidden';
   }
 });
+
+const aboutBgText = document.querySelector('.bg-text');
+const cloneAboutBgtext = aboutBgText.cloneNode(true);
+
+const aboutBgWrapper = document.querySelector('.bg-text-wrapper');
+aboutBgWrapper.insertAdjacentElement('afterbegin', cloneAboutBgtext);
+
+const scrollContainer = document.querySelector('.aboutBgWrapper');
+
+scrollContainer.addEventListener('wheel', (evt) => {
+  evt.preventDefault();
+  scrollContainer.scrollLeft += evt.deltaY;
+});
+
+// document.querySelector('.bg-text-wrapper').insertAdjacentHTML(before, cloneAboutBgtext);
 
 // const slides = document.querySelectorAll('.experience-wrapper__slider__slide'); // Select slides
 // const ballBox = document.querySelector('.experience-wrapper__nav__balls'); // Select Ball Box
