@@ -43,18 +43,22 @@ burger.addEventListener('click', function () {
   }
 });
 
-const aboutBgText = document.querySelector('.bg-text');
+const aboutBgText = document.querySelector('.bg-text-about');
+const projectsBgText = document.querySelector('.bg-text-projects');
 const cloneAboutBgtext = aboutBgText.cloneNode(true);
+const cloneProjectsBgtext = projectsBgText.cloneNode(true);
 
-const aboutBgWrapper = document.querySelector('.bg-text-wrapper');
+const aboutBgWrapper = document.querySelector('.bg-text-wrapper--about');
+const projectsBgWrapper = document.querySelector('.bg-text-wrapper--projects');
 aboutBgWrapper.insertAdjacentElement('afterbegin', cloneAboutBgtext);
+projectsBgWrapper.insertAdjacentElement('afterbegin', cloneProjectsBgtext);
 
-const scrollContainer = document.querySelector('.aboutBgWrapper');
+// const scrollContainer = document.querySelector('.aboutBgWrapper');
 
-scrollContainer.addEventListener('wheel', (evt) => {
-  evt.preventDefault();
-  scrollContainer.scrollLeft += evt.deltaY;
-});
+// scrollContainer.addEventListener('wheel', (evt) => {
+//   evt.preventDefault();
+//   scrollContainer.scrollLeft += evt.deltaY;
+// });
 
 // document.querySelector('.bg-text-wrapper').insertAdjacentHTML(before, cloneAboutBgtext);
 

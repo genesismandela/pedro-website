@@ -7,47 +7,47 @@
   background-color: $black;
   position: relative;
 
-  .bg-text-wrapper {
-    height: fit-content;
+  // .bg-text-wrapper {
+  //   height: fit-content;
 
-    position: absolute;
-    top: 15rem;
-    left: 0%;
+  //   position: absolute;
+  //   top: 15rem;
+  //   left: 0%;
 
-    width: 100%;
-    text-align: center;
+  //   width: 100%;
+  //   text-align: center;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-evenly;
 
-    overflow: hidden;
+  //   overflow: hidden;
 
-    filter: blur(2.5px);
-    .bg-text {
-      @include fluid-font(6rem, 18rem);
-      text-transform: uppercase;
-      font-weight: bold;
-      padding: 0;
-      position: relative;
-      margin-left: 3rem;
+  //   filter: blur(2.5px);
+  //   .bg-text {
+  //     @include fluid-font(6rem, 18rem);
+  //     text-transform: uppercase;
+  //     font-weight: bold;
+  //     padding: 0;
+  //     position: relative;
+  //     margin-left: 3rem;
 
-      color: $white-transparent;
+  //     color: $white-transparent;
 
-      // margin-left: -50rem;
+  //     // margin-left: -50rem;
 
-      &::after {
-        content: 'About';
-        margin-left: 3rem;
-        position: relative;
-      }
+  //     &::after {
+  //       content: 'About';
+  //       margin-left: 3rem;
+  //       position: relative;
+  //     }
 
-      // &::before {
-      //   content: 'About';
-      //   margin-right: 3rem;
-      // }
-    }
-  }
+  //     // &::before {
+  //     //   content: 'About';
+  //     //   margin-right: 3rem;
+  //     // }
+  //   }
+  // }
 
   // .about-grid * {
   //   border: 1px solid red;
@@ -68,11 +68,8 @@
 
     .text-big {
       grid-row: 1 / 2;
-      @include fluid-font(1.6rem, 3.5rem);
       padding: 0.75rem;
       margin-left: 1.5rem;
-      color: $yellow;
-      font-weight: bold;
 
       @media only screen and (min-width: $bp-tablet) {
         grid-column: 2 / 9;
@@ -82,9 +79,7 @@
 
     .heading-3 {
       grid-row: 2 / 4;
-      color: $white;
       padding: 2rem 0.5rem;
-      @include fluid-font(2.6rem, 5rem);
       width: fit-content;
       max-width: 70rem;
       margin: 0 auto;

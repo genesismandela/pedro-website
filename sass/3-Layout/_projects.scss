@@ -1,0 +1,209 @@
+.projects {
+  height: fit-content;
+  width: 100%;
+
+  background-color: $white;
+  position: relative;
+  overflow: hidden;
+
+  padding: 10rem 0;
+
+  // .bg-text-wrapper {
+  //   // border: 1px solid red;
+  //   width: fit-content;
+  //   position: absolute;
+  //   right: 35%;
+  //   top: -10%;
+  //   // height: 100%;
+
+  //   filter: blur(2.5px);
+
+  //   .bg-text {
+  //     @include fluid-font(4rem, 8rem);
+  //     color: $black-transparent;
+  //     text-transform: uppercase;
+  //     font-weight: bold;
+  //     //   padding: 0;
+  //     //   height: fit-content;
+  //     position: relative;
+
+  //     //   position: absolute;
+  //     //   right: 10rem;
+  //     //   margin-bottom: 3rem;
+  //     //   height: 100vh;
+
+  //     writing-mode: vertical-rl;
+  //     text-orientation: mixed;
+
+  //     //   color: $white-transparent;
+
+  //     //   // margin-left: -50rem;
+
+  //     &::after {
+  //       content: 'Projects';
+  //       margin-top: 3rem;
+  //     }
+  //     &::before {
+  //       content: 'Projects';
+  //       margin-bottom: 3rem;
+  //     }
+  //   }
+  // }
+
+  .project-grid {
+    padding: 0 1rem;
+
+    .text-big {
+      padding: 0.75rem;
+      margin-left: 1.5rem;
+    }
+
+    .heading-3 {
+      padding: 2rem 0.5rem;
+      color: $black;
+      max-width: 95rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .text {
+      color: $black;
+      @include fluid-font(1.6rem, 2rem);
+      margin: 3rem 0 3rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      width: fit-content;
+      padding-bottom: 0.5rem;
+
+      @media only screen and(min-width: $bp-tablet) {
+        display: none;
+      }
+
+      //   border-bottom: 1px solid $yellow-dark;
+
+      &::after {
+        content: ' \2192';
+        position: absolute;
+        margin-left: 1rem;
+        width: 2rem;
+        height: 2px;
+      }
+
+      &:hover {
+      }
+    }
+
+    .project-wrapper {
+      padding-top: 3rem;
+      max-width: fit-content;
+      margin: 0 auto;
+
+      @media only screen and (min-width: $bp-tablet) {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      &__project-box {
+        // border: 2px solid $yellow-dark;
+        background-color: $black;
+        margin: 1rem;
+        border-radius: 5px;
+        // padding: 1rem;
+        color: $white;
+        margin-bottom: 2rem;
+
+        position: relative;
+        z-index: 9999;
+        max-width: 45rem;
+        margin: 0 auto;
+
+        @media only screen and (min-width: $bp-tablet) {
+          margin: 0 1rem;
+        }
+
+        &:nth-child(1) {
+          margin-bottom: 2rem;
+
+          @media only screen and (min-width: $bp-tablet) {
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-child(2) {
+          display: none;
+
+          @media only screen and(min-width: $bp-tablet) {
+            display: block;
+          }
+        }
+
+        .img-wrapper {
+          width: 100%;
+          height: fit-content;
+          position: relative;
+          margin-bottom: 2.25rem;
+
+          .award {
+            position: absolute;
+            right: -1.25rem;
+            top: -2rem;
+            width: 5rem;
+            fill: $black;
+            background-color: $yellow;
+            border-radius: 50%;
+          }
+
+          .project-image {
+            width: 100%;
+            height: 300px;
+            border-radius: 5px 5px 0 0;
+          }
+        }
+
+        .project-title {
+          @include fluid-font(2rem, 3.2rem);
+          margin: 1rem;
+        }
+
+        .project-description {
+          @include fluid-font(1.4rem, 2.2rem);
+          margin-top: 2rem;
+          margin-left: 1rem;
+        }
+
+        .btn {
+          margin-left: 1rem;
+          margin-bottom: 3rem;
+        }
+
+        // .project-btn-wrapper {
+        //   display: flex;
+        //   justify-content: space-around;
+        //   margin-top: 1.25rem;
+        //   padding: 2rem;
+
+        //   &__btn {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+
+        //     width: 5rem;
+        //     height: 3rem;
+
+        //     padding: 1rem;
+        //     border: none;
+        //     border-radius: 5px;
+        //     background-color: $black;
+        //     cursor: pointer;
+
+        //     .svg-icon {
+        //       width: 75%;
+        //       fill: white;
+        //     }
+        //   }
+        // }
+      }
+    }
+  }
+}
