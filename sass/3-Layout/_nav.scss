@@ -24,7 +24,7 @@
 // Navigation Container
 .navigation {
   display: flex;
-  // justify-content: space-between;
+  // justify-content: space-around;
   align-items: center;
   width: 100%;
 
@@ -35,18 +35,20 @@
   max-width: 1240px;
   transform: translate(-50%);
   z-index: 60;
-
-  @media only screen and(min-width: $bp-tablet) {
-  }
+  font-family: $font-title;
 
   // Navigation Logo Box
   &__logo-wrapper {
-    margin-left: 2rem;
-
-    position: relative;
+    position: absolute;
+    left: 2rem;
     z-index: 10;
     visibility: visible;
     transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+
+    @media only screen and (min-width: $bp-tablet) {
+      left: 50%;
+      transform: translate(-50%);
+    }
 
     .logo {
       @include fluid-font(1.6rem, 2.4rem);
@@ -75,7 +77,6 @@
     padding-top: 10%;
     transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 
-    margin-right: 1rem;
     right: 1rem;
 
     @media only screen and(min-width: $bp-tablet) {
@@ -90,29 +91,19 @@
       position: relative;
 
       top: 0;
-      margin: 0 auto;
-      padding: 0;
+      padding: 0.8rem 0;
     }
   }
 
   &__item {
     list-style: none;
     padding: 0 2rem 0 2rem;
-
-    @media only screen and(max-width: $bp-tablet) {
-      margin-top: 2.5rem;
-      margin-left: 0;
-    }
-
-    &--active {
-      border-bottom: 1px solid $yellow;
-    }
   }
 
   &__link {
     @include fluid-font(1.6rem, 2rem);
     text-decoration: none;
-    padding-bottom: 0.5rem;
+    // padding-bottom: 0.5rem;
     font-weight: 400;
 
     position: relative;
@@ -132,10 +123,12 @@
 
   &__link-contact {
     visibility: hidden;
-    margin-right: 2rem;
 
     @media only screen and(min-width: $bp-tablet) {
       visibility: visible;
+      position: absolute;
+      right: 1rem;
+      text-decoration: none;
     }
   }
 

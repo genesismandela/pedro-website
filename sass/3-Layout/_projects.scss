@@ -1,4 +1,4 @@
-.projects {
+.projects-section {
   height: fit-content;
   width: 100%;
 
@@ -8,55 +8,8 @@
 
   padding: 10rem 0;
 
-  // .bg-text-wrapper {
-  //   // border: 1px solid red;
-  //   width: fit-content;
-  //   position: absolute;
-  //   right: 35%;
-  //   top: -10%;
-  //   // height: 100%;
-
-  //   filter: blur(2.5px);
-
-  //   .bg-text {
-  //     @include fluid-font(4rem, 8rem);
-  //     color: $black-transparent;
-  //     text-transform: uppercase;
-  //     font-weight: bold;
-  //     //   padding: 0;
-  //     //   height: fit-content;
-  //     position: relative;
-
-  //     //   position: absolute;
-  //     //   right: 10rem;
-  //     //   margin-bottom: 3rem;
-  //     //   height: 100vh;
-
-  //     writing-mode: vertical-rl;
-  //     text-orientation: mixed;
-
-  //     //   color: $white-transparent;
-
-  //     //   // margin-left: -50rem;
-
-  //     &::after {
-  //       content: 'Projects';
-  //       margin-top: 3rem;
-  //     }
-  //     &::before {
-  //       content: 'Projects';
-  //       margin-bottom: 3rem;
-  //     }
-  //   }
-  // }
-
-  .project-grid {
+  .projects {
     padding: 0 1rem;
-
-    .text-big {
-      padding: 0.75rem;
-      margin-left: 1.5rem;
-    }
 
     .heading-3 {
       padding: 2rem 0.5rem;
@@ -64,17 +17,19 @@
       max-width: 95rem;
       margin: 0 auto;
       text-align: center;
+      font-family: $font-title;
     }
 
-    .text {
+    &__more-text {
       color: $black;
       @include fluid-font(1.6rem, 2rem);
-      margin: 3rem 0 3rem 2rem;
+      margin: 3rem auto;
       text-decoration: none;
       font-weight: bold;
       position: relative;
       width: fit-content;
       padding-bottom: 0.5rem;
+      font-family: $font-text;
 
       @media only screen and(min-width: $bp-tablet) {
         display: none;
@@ -94,43 +49,70 @@
       }
     }
 
-    .project-wrapper {
+    .project-flex {
       padding-top: 3rem;
-      max-width: fit-content;
+      max-width: 100%;
       margin: 0 auto;
 
+      display: flex;
+      flex-direction: column;
+
       @media only screen and (min-width: $bp-tablet) {
-        display: flex;
-        justify-content: space-around;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
       }
 
       &__project-box {
-        // border: 2px solid $yellow-dark;
         background-color: $black;
-        margin: 1rem;
+
         border-radius: 5px;
-        // padding: 1rem;
+
         color: $white;
+        margin: 0 auto;
         margin-bottom: 2rem;
 
         position: relative;
         z-index: 9999;
-        max-width: 45rem;
-        margin: 0 auto;
+
+        max-width: 32rem;
+
+        box-shadow: $black-shadow;
 
         @media only screen and (min-width: $bp-tablet) {
-          margin: 0 1rem;
-        }
+          cursor: pointer;
+          margin-bottom: 3rem;
+          margin: 0 2rem 3rem 2rem;
 
-        &:nth-child(1) {
-          margin-bottom: 2rem;
+          &:hover {
+            transform: scale(1.05);
+            position: relative;
 
-          @media only screen and (min-width: $bp-tablet) {
-            margin-bottom: 0;
+            transition-duration: 0.6s;
+            box-shadow: $black-shadow-hover;
+
+            position: relative;
+            z-index: 1;
           }
         }
 
+        @media only screen and (min-width: $bp-tablet-land) {
+          width: 30rem;
+        }
+
+        @media only screen and (min-width: $bp-desktop) {
+          width: 35rem;
+        }
+
         &:nth-child(2) {
+          display: none;
+
+          @media only screen and(min-width: $bp-tablet) {
+            display: block;
+          }
+        }
+
+        &:nth-child(3) {
           display: none;
 
           @media only screen and(min-width: $bp-tablet) {
@@ -156,53 +138,29 @@
 
           .project-image {
             width: 100%;
-            height: 300px;
+            max-height: 200px;
             border-radius: 5px 5px 0 0;
           }
         }
 
         .project-title {
-          @include fluid-font(2rem, 3.2rem);
+          @include fluid-font(1.8rem, 2.8rem);
           margin: 1rem;
+          font-family: $font-title;
         }
 
         .project-description {
-          @include fluid-font(1.4rem, 2.2rem);
+          @include fluid-font(1.4rem, 1.6rem);
           margin-top: 2rem;
           margin-left: 1rem;
+          font-family: $font-text;
         }
 
         .btn {
           margin-left: 1rem;
           margin-bottom: 3rem;
+          @include fluid-font(1.4rem, 1.6rem);
         }
-
-        // .project-btn-wrapper {
-        //   display: flex;
-        //   justify-content: space-around;
-        //   margin-top: 1.25rem;
-        //   padding: 2rem;
-
-        //   &__btn {
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-
-        //     width: 5rem;
-        //     height: 3rem;
-
-        //     padding: 1rem;
-        //     border: none;
-        //     border-radius: 5px;
-        //     background-color: $black;
-        //     cursor: pointer;
-
-        //     .svg-icon {
-        //       width: 75%;
-        //       fill: white;
-        //     }
-        //   }
-        // }
       }
     }
   }

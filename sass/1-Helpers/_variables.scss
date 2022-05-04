@@ -7,6 +7,12 @@ $black: #170d16;
 $black-transparent: #051923be;
 $black-clear: #1a191abd;
 
+$black-shadow-color: hsl(306, 28%, 7% / 0.25);
+$black-shadow-color-1: hsl(306, 28%, 7% / 0.44);
+
+$black-shadow: 2px 4px 4px $black-shadow-color-1;
+$black-shadow-hover: 6px 12px 12px $black-shadow-color;
+
 $yellow: #f3f305;
 $yellow-dark: #dbdb32;
 $yellow-box: #5b5b1f;
@@ -20,6 +26,9 @@ $bp-phone: 37.5em; // 600px
 // Dimensions
 $dot-size: 1px;
 $dot-space: 22px;
+
+$font-text: 'Lora', serif;
+$font-title: 'Montserrat', sans-serif;
 
 // $blue: #010057;
 // $blue-transparent: #01005762;

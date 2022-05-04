@@ -7,51 +7,6 @@
   background-color: $black;
   position: relative;
 
-  // .bg-text-wrapper {
-  //   height: fit-content;
-
-  //   position: absolute;
-  //   top: 15rem;
-  //   left: 0%;
-
-  //   width: 100%;
-  //   text-align: center;
-
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: space-evenly;
-
-  //   overflow: hidden;
-
-  //   filter: blur(2.5px);
-  //   .bg-text {
-  //     @include fluid-font(6rem, 18rem);
-  //     text-transform: uppercase;
-  //     font-weight: bold;
-  //     padding: 0;
-  //     position: relative;
-  //     margin-left: 3rem;
-
-  //     color: $white-transparent;
-
-  //     // margin-left: -50rem;
-
-  //     &::after {
-  //       content: 'About';
-  //       margin-left: 3rem;
-  //       position: relative;
-  //     }
-
-  //     // &::before {
-  //     //   content: 'About';
-  //     //   margin-right: 3rem;
-  //     // }
-  //   }
-  // }
-
-  // .about-grid * {
-  //   border: 1px solid red;
-  // }
   .about-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -70,6 +25,7 @@
       grid-row: 1 / 2;
       padding: 0.75rem;
       margin-left: 1.5rem;
+      font-family: $font-text;
 
       @media only screen and (min-width: $bp-tablet) {
         grid-column: 2 / 9;
@@ -83,6 +39,7 @@
       width: fit-content;
       max-width: 70rem;
       margin: 0 auto;
+      font-family: $font-title;
 
       @media only screen and (min-width: $bp-tablet) {
         grid-column: 2 / 9;
@@ -92,8 +49,9 @@
 
     .text {
       color: $white;
-      @include fluid-font(1.6rem, 2rem);
+      @include fluid-font(1.4rem, 2rem);
       padding: 3rem 1rem;
+      font-family: $font-text;
 
       @media only screen and (min-width: $bp-tablet) {
         grid-column: 2 / 6;
@@ -126,84 +84,3 @@
     }
   }
 }
-
-// //////////////////////////////////////////////
-// .about-wrapper {
-//   width: 100%;
-//   height: 100%;
-
-//   background: linear-gradient(90deg, $black ($dot-space - $dot-size), transparent 1%) center,
-//     linear-gradient($black ($dot-space - $dot-size), transparent 1%) center, $yellow;
-//   background-size: $dot-space $dot-space;
-
-//   padding: 7.5rem 0;
-//   position: relative;
-
-//   .bg-side {
-//     background: linear-gradient(90deg, $yellow ($dot-space - $dot-size), transparent 1%) center,
-//     linear-gradient($yellow ($dot-space - $dot-size), transparent 1%) center, $black;
-//     background-size: $dot-space $dot-space;
-//     clip-path: polygon(0 0, 100% 0, 100% 10%, 0% 70%);
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 90%;
-//     z-index: 1;
-//   }
-
-//   .heading {
-//     @include fluid-font(2.4rem, 5.8rem);
-//     color: $white;
-//     // border: 5px double $orange;
-//     padding: 3rem;
-//     font-family: 'Cinzel', serif;
-//     text-transform: uppercase;
-//     margin: 3rem;
-//     // max-width: 80rem;
-//     max-width: 110rem;
-//     margin: 0 auto;
-
-//     @media only screen and (min-width: $bp-tablet) {
-//       text-align: center;
-//     }
-//   }
-
-//   .about-content {
-//     display: flex;
-//     color: $white;
-//     max-width: 115rem;
-//     margin: 0 auto;
-
-//     @media only screen and (max-width: $bp-tablet) {
-//       flex-direction: column-reverse;
-//       align-items: center;
-//     }
-
-//     .text-wrapper {
-//       padding: 3rem;
-//       p {
-//         max-width: 80rem;
-//       }
-
-//       .btn {
-//         margin-top: 3.5rem;
-//       }
-//     }
-
-//     img {
-//       padding: 2rem;
-//       width: 100%;
-//       max-width: 35rem;
-//       //   transform: rotate(-15deg);
-//       //   margin-top: 10rem;
-//       border-radius: 50%;
-
-//       position: relative;
-//       z-index: 5;
-
-//       @media only screen and (max-width: $bp-tablet) {
-//       }
-//     }
-//   }
-// }

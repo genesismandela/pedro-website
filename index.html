@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cinzel:wght@400;500;800&family=Roboto:wght@100;300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Montserrat:wght@100;400;600&display=swap" rel="stylesheet" />
   </head>
   <body>
     <!-- HEADER LANDING PAGE -->
@@ -20,24 +17,22 @@
         <!-- NAVIGATION MENU -->
         <div class="blur-overlay"></div>
         <nav class="navigation">
-          <!-- NAV LOGO -->
-          <div class="navigation__logo-wrapper">
-            <a href="index.html" class="logo">Pedro Zulaica</a>
-          </div>
           <!-- NAV LINKS -->
           <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="index.html" class="navigation__link">Home</a>
-            </li>
-
             <li class="navigation__item">
               <a href="#about" class="navigation__link">About</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Projects</a>
+              <a href="#projects" class="navigation__link">Projects</a>
             </li>
           </ul>
-          <a href="#" class="navigation__link-contact"><button class="btn btn-cta navigation__btn">Contact</button></a>
+          <a href="pdf/cv.pdf" download class="navigation__link-contact">
+            <button class="btn btn-cta navigation__btn">Download CV</button>
+          </a>
+          <!-- NAV LOGO -->
+          <div class="navigation__logo-wrapper">
+            <a href="index.html" class="logo">Pedro Zulaica</a>
+          </div>
           <!-- NAV BURGER -->
           <div class="burger-box">
             <button class="hamburger hamburger--spring" type="button">
@@ -53,13 +48,13 @@
 
           <p class="text">Hi, I am Pedro Zulaica and I am energy engineer passionate about solar and wind energy</p>
 
-          <button class="btn btn-cta">See projects</button>
+          <button class="btn btn-cta">Contact</button>
           <!-- <button class="btn btn-cta">Get in touch</button> -->
         </div>
 
         <!-- SCROLL ICON ANIMATION -->
         <div class="scroll-wrapper">
-          <a href="#about" class="scroll-wrapper__text">
+          <a href="#about" class="scroll-wrapper__link">
             <span></span>
           </a>
         </div>
@@ -68,28 +63,20 @@
         <ul class="link-list">
           <li class="link-list__item">
             <div class="link-list__item__wrap">
-              <a href="#" class="link-list__item__wrap__link">Linkedin</a>
-              <span>See my Linkedin profile</span>
+              <a href="https://www.linkedin.com/in/zulaica-pedro/" target="_blank" class="link-list__item__wrap__link">Linkedin</a>
             </div>
           </li>
           <li class="link-list__item">
             <div class="link-list__item__wrap">
-              <a href="#" class="link-list__item__wrap__link">Email</a>
-              <span>Copy my email to your clipboard</span>
+              <a onclick="copyEmail()" href="#" mai class="link-list__item__wrap__link">Email</a>
             </div>
           </li>
-          <li class="link-list__item">
+
+          <!-- <li class="link-list__item">
             <div class="link-list__item__wrap">
-              <a href="#" class="link-list__item__wrap__link">Github</a>
-              <span>See my Github profile</span>
+              <a href="pdf/cv.pdf" download class="link-list__item__wrap__link">Resume</a>
             </div>
-          </li>
-          <li class="link-list__item">
-            <div class="link-list__item__wrap">
-              <a href="#" class="link-list__item__wrap__link">Resume</a>
-              <span>Download my complete resume</span>
-            </div>
-          </li>
+          </li> -->
         </ul>
       </header>
     </div>
@@ -118,19 +105,19 @@
       </div>
     </section>
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects-section">
       <div class="bg-text-wrapper bg-text-wrapper--projects">
         <span class="bg-text bg-text-projects">Projects</span>
       </div>
 
-      <div class="project-grid">
+      <div class="projects">
         <h3 class="heading-3">
           1st prize for excellent and innovative project work for 10.000DKK from the Energy Sponsor Programme at the Department of Energy
           Technology, Aalborg University.
         </h3>
 
-        <div class="project-wrapper">
-          <div class="project-wrapper__project-box">
+        <div class="project-flex">
+          <div class="project-flex__project-box">
             <div class="img-wrapper">
               <svg class="award" viewBox="0 0 20 20">
                 <path
@@ -145,10 +132,10 @@
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia aliquam vero incidunt, autem perferendis odio repellat
               corrupti debitis fugit sit?
             </p>
-            <button class="btn btn-cta">Learn more</button>
+            <button class="btn btn-cta">See project</button>
           </div>
 
-          <div class="project-wrapper__project-box">
+          <div class="project-flex__project-box">
             <div class="img-wrapper">
               <img class="project-image" src="img/solar.jpg" alt="Project image" />
             </div>
@@ -158,9 +145,22 @@
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia aliquam vero incidunt, autem perferendis odio repellat
               corrupti debitis fugit sit?
             </p>
-            <button class="btn btn-cta">Learn more</button>
+            <button class="btn btn-cta">See project</button>
           </div>
-          <a href="#" class="text">See all projects</a>
+
+          <div class="project-flex__project-box">
+            <div class="img-wrapper">
+              <img class="project-image" src="img/solar.jpg" alt="Project image" />
+            </div>
+
+            <h4 class="project-title">Semester group work</h4>
+            <p class="project-description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia aliquam vero incidunt, autem perferendis odio repellat
+              corrupti debitis fugit sit?
+            </p>
+            <button class="btn btn-cta">See project</button>
+          </div>
+          <a href="#" class="projects__more-text">See all projects</a>
         </div>
       </div>
     </section>

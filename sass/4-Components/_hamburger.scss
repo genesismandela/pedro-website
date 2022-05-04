@@ -50,10 +50,10 @@ $hamburger-types: (spring) !default;
   position: absolute;
   right: 2rem;
   z-index: 100;
-  display: none;
+  display: inline-block;
 
-  @media only screen and(max-width: $bp-tablet) {
-    display: inline-block;
+  @media only screen and(min-width: $bp-tablet) {
+    display: none;
   }
 
   &:hover {
