@@ -174,159 +174,6 @@ body {
           grid-column: 2 / 4;
           grid-row: -1 / -1; } }
 
-.experience-text-wrapper {
-  margin: 15rem 3rem; }
-  .experience-text-wrapper__text-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
-    max-width: 110rem;
-    margin: 0 auto; }
-    @media only screen and (max-width: 48em) {
-      .experience-text-wrapper__text-wrapper {
-        grid-template-columns: 1fr; } }
-    .experience-text-wrapper__text-wrapper .text {
-      color: #170d16; }
-
-.panel-wrapper {
-  position: relative;
-  padding: 3rem 0; }
-  .panel-wrapper .title-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    text-align: center;
-    padding-bottom: 3rem; }
-    .panel-wrapper .title-wrapper__heading {
-      font-size: 3.2rem;
-      font-size: calc( 24px + (32 - 24) * ((100vw - 320px) / (1600 - 320)));
-      font-weight: 100;
-      padding-left: 0.75rem;
-      cursor: pointer; }
-      @media screen and (max-width: 320px) {
-        .panel-wrapper .title-wrapper__heading {
-          font-size: 2.4rem; } }
-      @media screen and (min-width: 1600px) {
-        .panel-wrapper .title-wrapper__heading {
-          font-size: 3.2rem; } }
-      .panel-wrapper .title-wrapper__heading--1 {
-        border-right: 1px solid #170d16; }
-      .panel-wrapper .title-wrapper__heading__active {
-        font-weight: 400; }
-
-.experience-wrapper {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #e2e2e2; }
-  .experience-wrapper__btn {
-    background-color: transparent;
-    border: none;
-    color: #170d16;
-    cursor: pointer;
-    font-size: 2rem;
-    width: 2rem;
-    position: absolute; }
-    .experience-wrapper__btn:hover {
-      color: #170d16; }
-    .experience-wrapper__btn--back {
-      left: 2rem; }
-    .experience-wrapper__btn--next {
-      right: 2rem; }
-  .experience-wrapper__slider {
-    position: relative;
-    border-radius: 5px;
-    background-color: #170d16;
-    overflow: hidden;
-    height: fit-content;
-    margin: 0 auto; }
-    .experience-wrapper__slider .slide-1 {
-      position: absolute; }
-    .experience-wrapper__slider .slide-2 {
-      position: absolute;
-      height: fit-content; }
-    .experience-wrapper__slider__slide {
-      display: flex;
-      flex-direction: column;
-      padding: 1rem;
-      max-width: 60rem;
-      position: sticky; }
-      .experience-wrapper__slider__slide .company {
-        margin-bottom: 2rem; }
-        .experience-wrapper__slider__slide .company__heading {
-          font-size: 2.8rem;
-          font-size: calc( 18px + (28 - 18) * ((100vw - 320px) / (1600 - 320))); }
-          @media screen and (max-width: 320px) {
-            .experience-wrapper__slider__slide .company__heading {
-              font-size: 1.8rem; } }
-          @media screen and (min-width: 1600px) {
-            .experience-wrapper__slider__slide .company__heading {
-              font-size: 2.8rem; } }
-        .experience-wrapper__slider__slide .company__dates {
-          display: block;
-          font-weight: 100;
-          font-size: 1.8rem;
-          font-size: calc( 14px + (18 - 14) * ((100vw - 320px) / (1600 - 320))); }
-          @media screen and (max-width: 320px) {
-            .experience-wrapper__slider__slide .company__dates {
-              font-size: 1.4rem; } }
-          @media screen and (min-width: 1600px) {
-            .experience-wrapper__slider__slide .company__dates {
-              font-size: 1.8rem; } }
-        .experience-wrapper__slider__slide .company__link {
-          font-size: 2.2rem;
-          font-size: calc( 14px + (22 - 14) * ((100vw - 320px) / (1600 - 320)));
-          text-decoration: none;
-          color: #f3f305; }
-          @media screen and (max-width: 320px) {
-            .experience-wrapper__slider__slide .company__link {
-              font-size: 1.4rem; } }
-          @media screen and (min-width: 1600px) {
-            .experience-wrapper__slider__slide .company__link {
-              font-size: 2.2rem; } }
-          .experience-wrapper__slider__slide .company__link:hover {
-            color: #dbdb32; }
-      .experience-wrapper__slider__slide .duties__heading {
-        font-size: 2.4rem;
-        font-size: calc( 18px + (24 - 18) * ((100vw - 320px) / (1600 - 320)));
-        font-weight: 100;
-        padding-bottom: 0.25rem; }
-        @media screen and (max-width: 320px) {
-          .experience-wrapper__slider__slide .duties__heading {
-            font-size: 1.8rem; } }
-        @media screen and (min-width: 1600px) {
-          .experience-wrapper__slider__slide .duties__heading {
-            font-size: 2.4rem; } }
-      .experience-wrapper__slider__slide .duties__list {
-        padding-left: 1rem; }
-      .experience-wrapper__slider__slide .duties__item {
-        margin: 1.5rem 0; }
-  .experience-wrapper__nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: 1rem; }
-    .experience-wrapper__nav__balls {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: center;
-      width: 100%;
-      height: 1.5rem; }
-      .experience-wrapper__nav__balls .ball {
-        align-self: center;
-        height: 0.75rem;
-        width: 0.75rem;
-        border: none;
-        border-radius: 50%;
-        margin: 0 0.5rem; }
-      .experience-wrapper__nav__balls .ball-active {
-        background-color: #f3f305;
-        height: 0.95rem;
-        width: 0.95rem; }
-
 .header-bg {
   background-image: url(../img/solar-panel.jpg);
   background-position: center;
@@ -482,7 +329,7 @@ body {
   align-items: center;
   width: 100%;
   position: absolute;
-  top: 0;
+  top: 2rem;
   left: 50%;
   padding-top: 2rem;
   max-width: 1240px;
@@ -495,10 +342,6 @@ body {
     z-index: 10;
     visibility: visible;
     transition: visibility 0s linear 0.33s, opacity 0.33s linear; }
-    @media only screen and (min-width: 48em) {
-      .navigation__logo-wrapper {
-        left: 50%;
-        transform: translate(-50%); } }
     .navigation__logo-wrapper .logo {
       font-size: 2.4rem;
       font-size: calc( 16px + (24 - 16) * ((100vw - 320px) / (1600 - 320)));
@@ -525,7 +368,6 @@ body {
     left: 0;
     z-index: 100;
     padding-bottom: 3rem;
-    padding-top: 10%;
     transition: visibility 0s linear 0.33s, opacity 0.33s linear;
     right: 1rem; }
     @media only screen and (min-width: 48em) {
@@ -536,8 +378,10 @@ body {
         align-content: center;
         height: auto;
         width: fit-content;
-        position: relative;
+        position: absolute;
         top: 0;
+        left: unset;
+        right: 0 !important;
         padding: 0.8rem 0; } }
   .navigation__item {
     list-style: none;

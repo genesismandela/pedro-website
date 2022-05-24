@@ -1,23 +1,23 @@
 'use strict';
 
-// Copy email on click
+// // Copy email on click
 
-emailBtn.addEventListener('click', function () {
-  const emailAddress = 'zulaicapedro@gmail.com';
-  navigator.clipboard.writeText(emailAddress.value);
-  /* Alert the copied text */
-  alert('Copied the text: ' + copyText.value);
-});
+// emailBtn.addEventListener('click', function () {
+//   const emailAddress = 'zulaicapedro@gmail.com';
+//   navigator.clipboard.writeText(emailAddress.value);
+//   /* Alert the copied text */
+//   alert('Copied the text: ' + copyText.value);
+// });
 
-function copyEmail() {
-  const emailAddress = 'zulaicapedro@gmail.com';
+// function copyEmail() {
+//   const emailAddress = 'zulaicapedro@gmail.com';
 
-  navigator.clipboard.writeText(emailAddress);
-  /* Alert the copied text */
-  setTimeout(function () {
-    alert("My email address it's copied to your clipboard");
-  }, 1);
-}
+//   navigator.clipboard.writeText(emailAddress);
+//   /* Alert the copied text */
+//   setTimeout(function () {
+//     alert("My email address it's copied to your clipboard");
+//   }, 1);
+// }
 
 ///////////////////////////////////////////////////////////////////////////
 // Navigation Menu
